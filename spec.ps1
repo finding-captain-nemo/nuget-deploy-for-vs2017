@@ -1,4 +1,4 @@
-# Version 1.5
+# Version 1.6
 
 # AssemblyInfo 속성 조회
 function GetValue{
@@ -123,7 +123,7 @@ $spec.package.metadata.tags = $tags
 
 # 버전관리 로그 조회
 $OutputEncoding = [Console]::OutputEncoding
-$output = (svn log http://versioncontrol.xinnos.com/svn/$($args[1])) | Out-String
+$output = (변경 기록 조회 명령: (Subversion) svn log (버전관리 주소)/$($args[1]), (Git) git log -1) | Out-String
 $logs = $output -split '\n'
 $count = 0
 foreach ($log in $logs){
